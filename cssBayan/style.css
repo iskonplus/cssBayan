@@ -10,7 +10,7 @@ main {
     max-width: 620px;
     width: 100%;
     margin: auto;
-    height: 568px;
+    /* height: 568px; */
     background-color: #F6F6EC;
     padding: 20px 30px;
 }
@@ -26,7 +26,6 @@ h1 {
 article{
     border-top: 2px solid #E3E7E7;
     padding: 15px 0px;
-
 }
 
 label {
@@ -36,19 +35,17 @@ label {
     cursor: pointer;
 }
 
-input[type=radio]{
-    visibility: hidden;
-    width: 0px;
-    height: 0px;
-    position: absolute;
-}
-
 .wrapper_head_mem{
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+}
+
+h2{
+    font-size: 14px;
+    font-weight: 800;
 }
 
 .wrapper_meme_imge {
@@ -62,11 +59,7 @@ input[type=radio]{
 input[type=radio]:checked ~ .wrapper_meme_imge {
     width: 260px;
     height: 260px;
-    color: blue;
 }
-
-
-
 
 .wrapper_status_icon {
     width: 18px;
@@ -77,13 +70,11 @@ input[type=radio]:checked ~ .wrapper_meme_imge {
     position: relative;
     transition: .3s;
     cursor: pointer;
-
 }
 
 input[type=radio]:checked ~.wrapper_head_mem> .wrapper_status_icon {
     transform: rotate(45deg);
 }
-
 
 .wrapper_status_icon>span,
 .wrapper_status_icon>span::before {
@@ -97,7 +88,6 @@ input[type=radio]:checked ~.wrapper_head_mem> .wrapper_status_icon {
 
 .wrapper_status_icon>span {
     transform: rotate(90deg);
-
 } *
 
 .wrapper_status_icon>span::before {
@@ -106,8 +96,6 @@ input[type=radio]:checked ~.wrapper_head_mem> .wrapper_status_icon {
     transform: rotate(90deg);
 
 } 
-
-
 
 
 img {
