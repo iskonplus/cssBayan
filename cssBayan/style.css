@@ -90,7 +90,6 @@ input[type="radio"]:checked~.wrapper_head_mem>.wrapper_status_icon {
 
 * .wrapper_status_icon>span::before {
     content: "";
-    /* top: 0px; */
     transform: rotate(90deg);
 }
 
@@ -147,7 +146,6 @@ img {
             background-color: #3077C5;
         }
 
-
         input[type="radio"]:checked~.wrapper_head_mem>h2 {
             color: #000000;
         }
@@ -155,7 +153,5 @@ img {
         article:active h2 {
             color: #3077C5;
         }
-
     }
-
 }
