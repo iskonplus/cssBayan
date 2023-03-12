@@ -17,6 +17,7 @@ main {
 
 .wrapper_h1 {
     padding-bottom: 0.5rem;
+    border-bottom: .15rem solid #e3e7e7;
 }
 
 h1 {
@@ -25,7 +26,7 @@ h1 {
 }
 
 article {
-    border-top: .15rem solid #e3e7e7;
+    border-bottom: .15rem solid #e3e7e7;
     padding: 1rem 0rem;
 }
 
@@ -38,13 +39,13 @@ label {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: .5rem;
 }
 
 h2 {
     font-size: 1rem;
     font-weight: 800;
     line-height: 1;
+    color: #000000;
 }
 
 .wrapper_meme_imge {
@@ -58,6 +59,7 @@ h2 {
 input[type="radio"]:checked~.wrapper_meme_imge {
     width: 15rem;
     height: 15rem;
+    margin: .5rem auto 0rem;
 }
 
 .wrapper_status_icon {
@@ -122,22 +124,29 @@ input[type="radio"]:checked~.wrapper_head_mem>.wrapper_status_icon {
         article:hover .wrapper_meme_imge {
             width: 16rem;
             height: 16rem;
+            margin: .5rem auto 0rem;
         }
 
         article:hover .wrapper_status_icon {
             transform: rotate(45deg);
         }
 
-        article:active .wrapper_status_icon>.iconPlus {
-            content: url(./src/PlusBlue.png);
-        }
-
         input[type="radio"]:checked~.wrapper_head_mem>h2 {
             color: #000000;
         }
 
-        article:active h2 {
+        article:active .wrapper_status_icon>.iconPlus {
+            content: url(./src/PlusBlue.png);
+        }
+
+        article:active .wrapper_head_mem>h2 {
             color: #3077C5;
+            opacity: .5;
+        }
+
+        article:active .imgMem {
+            transition: .4s;
+            opacity: .5;
         }
 
     }
