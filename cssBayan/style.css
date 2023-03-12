@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Alfa Slab One", cursive;
+    font-family: "Open Sans", sans-serif;
+}
+
+main {
+    max-width: 55rem;
+    width: 100%;
+    margin: auto;
+    min-height: 100vh;
+    background-color: #f6f6ec;
+    padding: 1rem 2rem;
+}
+
+.wrapper_h1 {
+    padding-bottom: 0.5rem;
+    border-bottom: .15rem solid #e3e7e7;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+article {
+    border-bottom: .15rem solid #e3e7e7;
+    padding: 1rem 0rem;
+}
+
+label {
+    cursor: pointer;
+}
+
+.wrapper_head_mem {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #000000;
+}
+
+.wrapper_meme_imge {
+    width: 0rem;
+    height: 0rem;
+    margin: 0rem auto;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+input[type="radio"]:checked~.wrapper_meme_imge {
+    width: 15rem;
+    height: 15rem;
+    margin: .5rem auto 0rem;
+}
+
+.wrapper_status_icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-left: 1rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.iconPlus {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+input[type="radio"]:checked~.wrapper_head_mem>.wrapper_status_icon {
+    transform: rotate(45deg);
+}
+
+.imgMem {
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 820px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    input[type="radio"]:checked~.wrapper_meme_imge {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    @media (min-width: 1200px) {
+        h1 {
+            font-size: 2.3rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            color: #3077C5;
+            transition: .3s;
+        }
+
+        main:hover h2 {
+            color: #000000;
+        }
+
+        .wrapper_status_icon {
+            visibility: hidden;
+        }
+
+        main:hover .wrapper_status_icon {
+            visibility: visible;
+        }
+
+        article:hover .wrapper_meme_imge {
+            width: 16rem;
+            height: 16rem;
+            margin: .5rem auto 0rem;
+        }
+
+        article:hover .wrapper_status_icon {
+            transform: rotate(45deg);
+        }
+
+        input[type="radio"]:checked~.wrapper_head_mem>h2 {
+            color: #000000;
+        }
+
+        article:active .wrapper_status_icon>.iconPlus {
+            content: url(./src/PlusBlue.png);
+        }
+
+        article:active .wrapper_head_mem>h2 {
+            color: #3077C5;
+            opacity: .5;
+        }
+
+        article:active .imgMem {
+            transition: .4s;
+            opacity: .5;
+        }
+
+    }
+}
