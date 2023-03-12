@@ -44,10 +44,11 @@ label {
 h2 {
     font-size: 1rem;
     font-weight: 800;
+    line-height: 1;
 }
 
 .wrapper_meme_imge {
-    width:  0rem;
+    width: 0rem;
     height: 0rem;
     margin: 0rem auto;
     cursor: pointer;
@@ -63,34 +64,17 @@ input[type="radio"]:checked~.wrapper_meme_imge {
     width: 1.2rem;
     height: 1.2rem;
     margin-left: 1rem;
-    display: flex;
-    align-items: center;
-    position: relative;
     transition: 0.3s;
     cursor: pointer;
 }
 
+.iconPlus {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
 input[type="radio"]:checked~.wrapper_head_mem>.wrapper_status_icon {
     transform: rotate(45deg);
-}
-
-.wrapper_status_icon>span,
-.wrapper_status_icon>span::before {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: .16rem;
-    background-color: #000000;
-    border-radius: 1rem;
-}
-
-.wrapper_status_icon>span {
-    transform: rotate(90deg);
-}
-
-* .wrapper_status_icon>span::before {
-    content: "";
-    transform: rotate(90deg);
 }
 
 img {
@@ -99,21 +83,24 @@ img {
 }
 
 @media (min-width: 820px) {
-    h1{
+    h1 {
         font-size: 2.2rem;
     }
+
     h2 {
         font-size: 1.1rem;
     }
+
     input[type="radio"]:checked~.wrapper_meme_imge {
         width: 16rem;
         height: 16rem;
     }
 
     @media (min-width: 1200px) {
-        h1{
+        h1 {
             font-size: 2.3rem;
         }
+
         h2 {
             font-size: 1.3rem;
             color: #3077C5;
@@ -141,9 +128,8 @@ img {
             transform: rotate(45deg);
         }
 
-        article:active .wrapper_status_icon>span,
-        article:active .wrapper_status_icon>span::before {
-            background-color: #3077C5;
+        article:active .wrapper_status_icon>.iconPlus {
+            content: url(./src/PlusBlue.png);
         }
 
         input[type="radio"]:checked~.wrapper_head_mem>h2 {
@@ -153,5 +139,6 @@ img {
         article:active h2 {
             color: #3077C5;
         }
+
     }
 }
